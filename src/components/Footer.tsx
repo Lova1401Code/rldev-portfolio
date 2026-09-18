@@ -103,24 +103,28 @@ export function Footer() {
             </ul>
 
             <div className="mt-5 flex items-center gap-3">
-              <a
-                href={siteConfig.contact.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-800 text-zinc-400 transition-colors hover:border-indigo-500/50 hover:text-indigo-400"
-              >
-                <GithubIcon size={18} />
-              </a>
-              <a
-                href={siteConfig.contact.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-800 text-zinc-400 transition-colors hover:border-indigo-500/50 hover:text-indigo-400"
-              >
-                <LinkedinIcon size={18} />
-              </a>
+              {siteConfig.contact.github && (
+                <a
+                  href={siteConfig.contact.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-800 text-zinc-400 transition-colors hover:border-indigo-500/50 hover:text-indigo-400"
+                >
+                  <GithubIcon size={18} />
+                </a>
+              )}
+              {siteConfig.contact.linkedin && (
+                <a
+                  href={siteConfig.contact.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-800 text-zinc-400 transition-colors hover:border-indigo-500/50 hover:text-indigo-400"
+                >
+                  <LinkedinIcon size={18} />
+                </a>
+              )}
               <a
                 href={siteConfig.contact.whatsappUrl}
                 target="_blank"

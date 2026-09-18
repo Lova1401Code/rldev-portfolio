@@ -7,11 +7,11 @@ export const siteConfig = {
   ogImage: "/couverture.png",
   location: "Madagascar • Disponible localement et à distance",
   contact: {
-    email: "contact@rldev.com",
-    whatsapp: "+261000000000",
-    whatsappUrl: "https://wa.me/261000000000",
-    github: "https://github.com/rldev",
-    linkedin: "https://www.linkedin.com/in/rldev",
+    email: "rldev@contact.mg",
+    whatsapp: "+261 33 83 934 43",
+    whatsappUrl: "https://wa.me/261338393443",
+    github: "",
+    linkedin: "",
   },
   nav: [
     { label: "Accueil", href: "#accueil" },
