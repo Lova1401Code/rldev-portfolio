@@ -1,6 +1,7 @@
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
+import { CTAIllustration } from "@/components/illustrations/CTAIllustration";
 import { ArrowRight } from "lucide-react";
 
 export function FinalCTA() {
@@ -11,6 +12,9 @@ export function FinalCTA() {
           {/* Glow accents */}
           <div className="glow-indigo absolute -left-20 -top-20 h-[300px] w-[300px] opacity-50" />
           <div className="glow-indigo absolute -bottom-20 -right-20 h-[300px] w-[300px] opacity-30" />
+
+          {/* Decorative SVG */}
+          <CTAIllustration />
 
           <div className="relative">
             <h2 className="mx-auto max-w-2xl text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">

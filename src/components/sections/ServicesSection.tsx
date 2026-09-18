@@ -2,6 +2,7 @@ import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { services } from "@/data/services";
+import { DotPattern } from "@/components/illustrations/BackgroundDecor";
 import {
   Globe,
   AppWindow,
@@ -22,7 +23,9 @@ const iconMap: Record<string, LucideIcon> = {
 
 export function ServicesSection() {
   return (
-    <Section id="services">
+    <Section id="services" className="relative">
+      <DotPattern className="inset-0 h-full w-full opacity-50" />
+      <div className="relative">
       <SectionHeading
         eyebrow="Services"
         title="Des solutions web adaptées à votre activité"
@@ -82,6 +85,7 @@ export function ServicesSection() {
             </Reveal>
           );
         })}
+      </div>
       </div>
     </Section>
   );

@@ -1,6 +1,7 @@
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { whyItems } from "@/data/why";
+import { BlobShape } from "@/components/illustrations/BackgroundDecor";
 import {
   Palette,
   Smartphone,
@@ -22,7 +23,9 @@ const iconMap: Record<string, LucideIcon> = {
 
 export function WhySection() {
   return (
-    <Section id="pourquoi">
+    <Section id="pourquoi" className="relative">
+      <BlobShape className="right-0 bottom-10 h-[400px] w-[400px] opacity-50" />
+      <div className="relative">
       <SectionHeading
         eyebrow="Pourquoi RL Dev ?"
         title="Un développement pensé pour votre activité"
@@ -46,6 +49,7 @@ export function WhySection() {
             </Reveal>
           );
         })}
+      </div>
       </div>
     </Section>
   );

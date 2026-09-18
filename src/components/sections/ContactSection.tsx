@@ -6,6 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/config/site";
 import { MessageCircle, Mail, MapPin, Send } from "lucide-react";
+import { GridPattern } from "@/components/illustrations/BackgroundDecor";
 
 export function ContactSection() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -22,7 +23,9 @@ export function ContactSection() {
   };
 
   return (
-    <Section id="contact">
+    <Section id="contact" className="relative">
+      <GridPattern className="inset-0 h-full w-full opacity-40" />
+      <div className="relative">
       <SectionHeading
         eyebrow="Contact"
         title="Parlons de votre projet."
@@ -179,6 +182,7 @@ export function ContactSection() {
             </div>
           </form>
         </Reveal>
+      </div>
       </div>
     </Section>
   );

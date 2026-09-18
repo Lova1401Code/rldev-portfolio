@@ -46,3 +46,42 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #3f3f46;
 }
+
+/* Float animations for illustrations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float-delay {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.float-anim {
+  animation: float 4s ease-in-out infinite;
+}
+
+.float-anim-delay {
+  animation: float-delay 5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.float-anim-slow {
+  animation: float-slow 6s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .float-anim,
+  .float-anim-delay,
+  .float-anim-slow {
+    animation: none;
+  }
+}

@@ -1,28 +1,38 @@
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
+import { AboutIllustration } from "@/components/illustrations/AboutIllustration";
 
 export function AboutSection() {
   return (
     <Section id="a-propos">
       <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-        <Reveal>
-          <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-indigo-400">
-              À propos
-            </p>
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Bonjour, moi c'est le développeur derrière RL Dev.
-            </h2>
-          </div>
+        {/* Illustration */}
+        <Reveal delay={0} className="order-1 lg:order-1">
+          <AboutIllustration />
         </Reveal>
 
-        <Reveal delay={150}>
-          <div className="space-y-5 text-base leading-relaxed text-zinc-400 sm:text-lg">
+        {/* Text */}
+        <div className="order-2 space-y-5 text-base leading-relaxed text-zinc-400 sm:text-lg">
+          <Reveal>
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-indigo-400">
+                À propos
+              </p>
+              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                Bonjour, moi c'est le développeur derrière RL Dev.
+              </h2>
+            </div>
+          </Reveal>
+
+          <Reveal delay={100}>
             <p>
               Je suis développeur web Full-Stack et j'accompagne les
               entreprises, entrepreneurs et porteurs de projets dans la création
               de solutions web modernes.
             </p>
+          </Reveal>
+
+          <Reveal delay={150}>
             <p>
               Je travaille principalement avec des technologies comme{" "}
               <span className="font-semibold text-white">
@@ -30,22 +40,31 @@ export function AboutSection() {
               </span>
               .
             </p>
+          </Reveal>
+
+          <Reveal delay={200}>
             <p>
               Mon approche est simple :{" "}
               <span className="font-semibold text-indigo-400">
                 comprendre votre besoin avant de commencer à coder.
               </span>
             </p>
+          </Reveal>
+
+          <Reveal delay={250}>
             <p>
               L'objectif n'est pas simplement de vous livrer un site web, mais
               de créer une solution utile à votre activité.
             </p>
+          </Reveal>
+
+          <Reveal delay={300}>
             <p>
               Je peux intervenir sur un projet complet, depuis la réflexion et
               la conception jusqu'au développement et la mise en ligne.
             </p>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
 
         {/* Decorative code block */}
         <Reveal delay={300} className="lg:col-span-2">
